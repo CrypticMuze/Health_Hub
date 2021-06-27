@@ -35,6 +35,7 @@ class FactoryIndex extends Component {
     return (
     <Layout>
       <div>
+        <br/>
         <h3>Open Contracts!</h3>
         <Link route='/Contracts/new'><a>
           <Button floated='right' content="Create Contract" icon="add circle" primary />

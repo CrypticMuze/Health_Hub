@@ -4,7 +4,6 @@ import 'semantic-ui-css/semantic.min.css'
 import Layout from '../../components/Layout'
 import Campaign from '../../ethereum/campaign'
 import CreateData from '../../components/CreateData'
-import MakeRequest from '../../components/MakeRequest'
 import {Link} from '../../routes'
 
 
@@ -63,7 +62,6 @@ class ContractShow extends Component {
           <Button>View Requests</Button>
         </a>
       </Link>
-      <MakeRequest address={this.props.address} />
     </Layout>
     )
   }

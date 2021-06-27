@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Layout from '../../../components/Layout';
-import { Card,Button,Menu,Table } from 'semantic-ui-react';
+import { Button,Table } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css'
 import { Link } from '../../../routes'
 import Campaign from '../../../ethereum/campaign'
@@ -14,7 +14,8 @@ class RequestIndex extends Component {
     const campaign = Campaign(address);
     const requestCount = await campaign.methods.getRequestsCount(0).call();
 
-    const requests = await Promise.all(Array(requestCount).fill().map((elemnt, index) => {
+    const requests = await Promise.all(
+      Array(parseInt(requestCount)).fill().map((element, index) => {
       return campaign.methods.requests(index).call();
       })
     );
@@ -26,6 +27,8 @@ class RequestIndex extends Component {
 
   renderRow() {
     return this.props.requests.map((request, index) => {
+      console.log(request);
+
       return (
         <RequestRow
           key={index}
@@ -55,7 +58,7 @@ class RequestIndex extends Component {
               <HeaderCell>ID</HeaderCell>
               <HeaderCell>Description</HeaderCell>
               <HeaderCell>Recipient</HeaderCell>
-              <HeaderCell>Approve</HeaderCell>
+              <HeaderCell>Approved</HeaderCell>
             </Row>
           </Header>
           <Body>

@@ -7,15 +7,6 @@ import Campaign from '../ethereum/campaign';
 
 class RequestRow extends Component {
 
-  onApprove = async () => {
-    const campaign = Campaign(this.props.address);
-    const accounts = await web3.eth.getAccounts();
-
-    await campaign.methods.finalizeRequest(this.props.id,'0xE74A5F0c0e62db42ba9F2Ddb2122069F8D9f0Fc5').send({
-      from: accounts[0]
-    });
-  };
-
 
   render() {
 
@@ -24,12 +15,13 @@ class RequestRow extends Component {
 
     return (
       <Row
-        disabled={request.complete}
-        positive={!request.complete}
+        disabled={this.props.request[2]}
+        positive={!this.props.request[2]}
         >
-        <Cell>{id}</Cell>
-        <Cell>{request.address}</Cell>
-        <Cell>{request.recipient}</Cell>
+        <Cell>{this.props.id}</Cell>
+        <Cell>{this.props.request[0]}</Cell>
+        <Cell>{this.props.request[1]}</Cell>
+        <Cell>{ this.props.request[2]==true ? 'YES' : 'NO' }</Cell>
         <Cell>
           {request.complete ? null : (
             <Button color="green" basic onClick={this.onApprove}>Approve</Button>
@@ -39,6 +31,15 @@ class RequestRow extends Component {
       </Row>
     );
   }
+
+  onApprove = async () => {
+    const campaign = Campaign(this.props.address);
+    const accounts = await web3.eth.getAccounts();
+    await campaign.methods.finalizeRequest(0,this.props.request[1]).send({
+      from: accounts[0]
+    });
+  };
+
 }
 
 export default RequestRow;
