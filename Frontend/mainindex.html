@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HealthHub</title>
+    <link rel="stylesheet" type="text/css" href="./style1.css">
+	<link rel="icon" href="./images/HHL2.png" type="image/icon type">
+    <link rel="stylesheet" href="./animate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class = "header">
+        <nav>
+            <a href="mainindex.html"><img src="./images/HHL.png"></a>
+            <p>HealthHub</p>
+            <div class = "nav-links" id="navLinks">
+                <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Our Vision</a></li>
+                    <li><a href="">HealthHub</a></li>
+                    <li><a href="">DocBot</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+        </nav>
+    <div class="text-box">
+        <div class="typewriter-text">
+        <h1>Revolutionizing Paitient Care.</h1></div>
+        <p>Enter Text Here</p>
+        <a href="" class="hero-btn">Keep Scrolling</a>
+    </div>
+    </section>
+
+    <section class = "ourvision">
+        <h1>Our Vision</h1>
+        <p>Enter Text</p>
+
+        <div class="row">
+            <div class="vision-col">
+                <h3>Transparency</h3>
+                <p>Lorem Ipsum</p>    
+            </div>
+            <div class="vision-col">
+                <h3>Scalibilty</h3>
+                <p>Lorem Ipsum</p>    
+            </div>
+            <div class="vision-col">
+                <h3>Security</h3>
+                <p>Lorem Ipsum</p>    
+            </div>
+        </div>
+    </section>
+
+    <section class = "contactus">
+        
+    </section>
+
+
+<script>
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.right = "0px";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px"
+    }
+</script>
+</body>
+</html>
