@@ -42,10 +42,10 @@ def predict():
 
     return render_template('index.html', pred="The probable diagnosis says it could be {}".format(res))
 
-
+ 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
+ 
 
 

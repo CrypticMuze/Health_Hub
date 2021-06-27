@@ -22,6 +22,7 @@ contract HealthHub {
     struct Data{
         string description; //separated by semi-colon not comma
         mapping(address => bool) requestsMade;
+        mapping(address => string) requestersDesc;
         mapping(address => bool) finalApproved;
         
         uint requestsMadeCount;
@@ -42,11 +43,12 @@ contract HealthHub {
         r.manager = msg.sender; 
     }
     
-    function makeRequest(address add, uint index) public {
+    function makeRequest(string memory desc, address add, uint index) public {
         // requester can be any person who has made the contribution in the data
         // require(requesters[msg.sender]);  //to make sure the requetser has made the contribution in data
         require(!data[index].requestsMade[add]);  //to make sure only one time the request is getting made
         
+        data[index].requestersDesc[add] = desc;
         data[index].requestsMade[add] = true;
         data[index].requestsMadeCount++;
         requestersAdd.push(add);
@@ -54,14 +56,13 @@ contract HealthHub {
     
     function finalizeRequest(uint index, address req) public {
         require(data[index].manager == msg.sender);
-
         data[index].finalApproved[req] = true;
     }
 
-    function requests(uint index) public view returns(address, bool, bool) {
+    function requests(uint index) public view returns(string memory, address, bool) {
         return (
+            data[index].requestersDesc[requestersAdd[index]],
             requestersAdd[index],
-            data[index].requestsMade[requestersAdd[index]],
             data[index].finalApproved[requestersAdd[index]]
         );
     }
@@ -87,4 +88,4 @@ contract HealthHub {
 }
 
 
-
+ 
