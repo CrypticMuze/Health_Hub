@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -2652,8 +2653,6 @@
   -webkit-animation-name: hinge;
   animation-name: hinge;
 }
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes rollIn {
   0% {

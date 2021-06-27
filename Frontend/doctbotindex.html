@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HealthHub</title>
+    <link rel="stylesheet" type="text/css" href="../DocBot/static/css/materialize.css">
+    <link rel="stylesheet" type="text/css" href="../DocBot/static/css/style.css">
+	<link rel="icon" href="./images/HHL2.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">@User</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h2 class="header center orange-text">Use our predictive model to easily classify your diagnosis</h2>
+            <div class="row center">
+            <h5 class="header col s12 light">Let DocBot find the best result for you. Predict the Possibility of a disease by entering all symptoms
+            <br>
+            </h5>
+            </div>
+    
+            <div class="row">
+            <form action='/predict' method="post" class="col s12">
+            <div class="row">
+            <div class="input-field col s4">
+                <label for="s1"><b>Symptom-1</b></label>
+                    <br>
+                <input id="s1" name="Symptom1" placeholder="Fever"  type="text" class="validate">
+            </div>
+    
+            <div class="input-field col s4">
+                <label for="s2"><b> Symptom-2</b></label>
+                    <br>
+                <input id="s2" name="Symptom2" placeholder="Itching"  type="text" class="validate">
+            </div>
+    
+            <div class="input-field col s4">
+                <label for="s3"><b>Symptom-3</b></label>
+                    <br>
+                <input id="s3" name="Symptom3" placeholder="Dizziness" type="text" class="validate">
+            </div>
+    
+            <div class="input-field col s4">
+                <label for="s3"><b>Symptom-4</b></label>
+                    <br>
+                <input id="s3" name="Symptom4" placeholder="Fatigue" type="text" class="validate">
+            </div>
+    
+            <div class="input-field col s4">
+                <label for="s3"><b>Symptom-5</b></label>
+                    <br>
+                <input id="s3" name="Symptom5" placeholder="Nodal Skin Eruptions" type="text" class="validate">
+            </div>
+    
+            <div class="input-field col s4">
+                <label for="s3"><b>Symptom-6</b></label>
+                    <br>
+                <input id="s3" name="Symptom6" placeholder="Rectal Bleeding" type="text" class="validate">
+            </div>
+            </div>
+    
+            <div class="row center">
+                <button type="submit" class="btn-large waves-effect waves-light orange">Predict</button>
+            </div>
+            </form>
+            </div>
+    
+        <br>
+            {{pred}}
+        <br>
+    
+        </div>
+        </div>
+        <br><br>
+        </div>
+        </div>
+    
+      <footer class="page-footer orange">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h4 class="white-text">About</h4>
+              <p class="grey-text text-lighten-4">DocBot is a one stop solution to envisioning a reinvented medical sector by leveraging
+                automated AI/ML functionalities and poviding efficient and accurate patient care from the comfort of their homes!
+              </p>
+    
+            </div>
+            <div class="col l3 s12">
+              <style>
+                ul {
+                  width:100%;
+                  text-align: center;
+                }
+                h5 {
+                  text-align: center;
+                }
+              </style>
+              <h5 class="white-text">Connect with Lokesh!</h5>
+              <ul>
+                <li><a class="white-text" href="https://www.hackerrank.com/4man_mishra?hr_r=1">Lokesh's HackerRank</a></li>
+                <li><a class="white-text" href="https://github.com/MishraLokesh">Lokesh's GitHub</a></li>
+                <li><a class="white-text" href="https://www.linkedin.com/in/lokesh-mishra-0807/">Lokesh's Linkedin</a></li> 
+              </ul>
+              </div>
+              <div class="col l3 s12">
+                <h5 class="white-text">Connect with Aman!</h5>
+                <ul>
+                  <li><a class="white-text" href="https://www.hackerrank.com/a_anand2k19">Aman's HackerRank</a></li>
+                  <li><a class="white-text" href="https://github.com/aman-anand1906">Aman's GitHub</a></li>
+                  <li><a class="white-text" href="https://www.linkedin.com/in/amanxanand/">Aman's Linkedin</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          View the source code on <a class="orange-text text-lighten-3" href="https://github.com/MishraLokesh/Health_Hub">GitHub</a>
+          </div>
+        </div>
+      </footer>
+    
+    
+
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="../static/js/materialize.js"></script>
+      <script src="../static/js/init.js"></script>
+    
+      <script type="text/javascript">
+        (function(d, m){
+            var kommunicateSettings = 
+                {"appId":"1fd2df15a8dd06b775934fb4772f80ad7","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+      /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+      </script>
+</body>
+</html>

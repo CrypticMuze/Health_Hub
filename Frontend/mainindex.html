@@ -5,25 +5,26 @@
     <title>HealthHub</title>
     <link rel="stylesheet" type="text/css" href="./style1.css">
 	<link rel="icon" href="./images/HHL2.png" type="image/icon type">
-    <link rel="stylesheet" href="./animate.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./animate.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <section class = "header">
         <nav>
-            <a href="mainindex.html"><img src="./images/HHL.png"></a>
-            <p>HealthHub</p>
+            <a href="mainindex.html"><img src=""></a>
             <div class = "nav-links" id="navLinks">
                 <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Our Vision</a></li>
-                    <li><a href="">HealthHub</a></li>
-                    <li><a href="">DocBot</a></li>
-                    <li><a href="">Contact Us</a></li>
+                    <li><a href="mainindex.html">Home</a></li>
+                    <li><a href="#ourvision">Our Vision</a></li>
+                    <li><a href="http://localhost:3000/">HealthHub</a></li>
+                    <li><a href="doctbotindex.html">DocBot</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
@@ -31,36 +32,94 @@
     <div class="text-box">
         <div class="typewriter-text">
         <h1>Revolutionizing Paitient Care.</h1></div>
-        <p>Enter Text Here</p>
+        <p>HealthHub aims to revolutionize patient healthcare by bringing all the key stakeholders 
+           of the medical sector under one umbrealla making everything very convinent not only for the 
+           patient but also the whole environment as a whole.</p>
         <a href="" class="hero-btn">Keep Scrolling</a>
     </div>
     </section>
 
-    <section class = "ourvision">
+    <section class = "ourvision" id="ourvision">
         <h1>Our Vision</h1>
-        <p>Enter Text</p>
+        <p>HealthHub is designed with the ideal of being a one stop solution for all the integral components of the 
+            medical sector. Our final vision for this project is that we provide an umbrella framework for all parties of the healthcare
+            ecosystem (e.g. Insurance Agencies, Doctors, Patients, Pharmaceuticals, Diagnostic Centers, etc.). By leveraging the 
+            underlying transparent, scalable and secure blockchain platform we are enabling the ease of communication between
+            all the mentioned agencies and enhancing the eficiency of the medical sector.
+        </p>
 
         <div class="row">
             <div class="vision-col">
                 <h3>Transparency</h3>
-                <p>Lorem Ipsum</p>    
-            </div>
-            <div class="vision-col">
-                <h3>Scalibilty</h3>
-                <p>Lorem Ipsum</p>    
+                <p>HealthHub is supposed to create a transparent ecosystem in which patients can leverage the software to  
+                    eliminate red tape, increase efficiency of third party access and view all information on that network, 
+                    as a result creating a secure link between patient-doctor & patient-third party institues.</p>    
             </div>
             <div class="vision-col">
                 <h3>Security</h3>
-                <p>Lorem Ipsum</p>    
+                <p> HealthHub is based on principles of cryptography, decentralization and consensus, which ensure trust in transactions. 
+                    In most blockchains or distributed ledger technologies (DLT), 
+                    the data is structured into blocks and each block contains a transaction or bundle of transactions in which 
+                    all patient details will be at one place which will be easily accesible by the patient and 
+                    all data can be transferred from one place to another in seconds of time only after consent is given by the patient.
+                </p>    
+            </div>
+            <div class="vision-col">
+                <h3>Scalibilty</h3>
+                <p>Scalability of the underlying blockchain network ensures that the platform 
+                    supports an increasing load of transactions, as well as increasing the number of nodes 
+                    in the network making all transactions fast,efficient and secure as well as ensuring worldwide 
+                    connectability and portability.</p>    
             </div>
         </div>
     </section>
 
-    <section class = "contactus">
-        
-    </section>
-
-
+    <footer class="section footer-classic context-dark bg-image" style="background: #666986;">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4"><a class="brand" href="mainindex.html"><img class="brand-logo-light" src= "images/HHL.png" width="140" height="140"></a>
+                <p> A one stop solution to envisioning a reinvented medical sector by leveraging blockchain and automated AI/ML 
+                    functionalities and poviding efficient and accurate patient care from the comfort of their homes!</p>
+                <p class="rights"><span>©  </span><span class="copyright-year">2021</span><span> </span><span>ALHealth</span><span> - </span><span>All Rights Reserved.</span></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Contact Us</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>VIT Vellore, Tamil Nadu, India</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">a.anand2k19@gmail.com</a> <span>or</span> <a href="mailto:#">4man.mishra@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="tel:#">+91 9765223734</a> <span>or</span> <a href="tel:#">+91 9125840067</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5>Links</h5>
+              <ul class="nav-list">
+                <li><a href="mainindex.html">Home</a></li>
+                <li><a href="healthhubindex.html">HealthHub</a></li>
+                <li><a href="doctbotindex.html">DocBot</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="https://github.com/aman-anand1906"><span class="icon mdi mdi-facebook"></span><span>Aman's GitHub</span></a></div>
+          <div class="col"><a class="social-inner" href="https://www.instagram.com/aman_anand_619/"><span class="icon mdi mdi-instagram"></span><span>Aman's Instagram</span></a></div>
+          <div class="col"><a class="social-inner" href="https://www.linkedin.com/in/amanxanand/"><span class="icon mdi mdi-twitter"></span><span>Aman's LinkedIn</span></a></div>
+          <div class="col"><a class="social-inner" href="https://github.com/MishraLokesh"><span class="icon mdi mdi-facebook"></span><span>Lokesh's GitHub</span></a></div>
+          <div class="col"><a class="social-inner" href="https://www.instagram.com/lokesh.mishra__/"><span class="icon mdi mdi-instagram"></span><span>Lokesh's Instagram</span></a></div>
+          <div class="col"><a class="social-inner" href="https://www.linkedin.com/in/lokesh-mishra-0807/"><span class="icon mdi mdi-twitter"></span><span>Lokesh's LinkedIn</span></a></div>
+        </div>
+      </footer>
+    
 <script>
     var navLinks = document.getElementById("navLinks")
     function showMenu(){
@@ -70,5 +129,18 @@
         navLinks.style.right = "-200px"
     }
 </script>
+
+<script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"1fd2df15a8dd06b775934fb4772f80ad7","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+  /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+
 </body>
 </html>

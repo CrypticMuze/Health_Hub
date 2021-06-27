@@ -7,13 +7,10 @@ from collections import Counter
 
 app = Flask(__name__)
 model1 = pickle.load(open('D:/VS Code/Health_Hub/DocBot/model1.pkl', 'rb'))  
-model3 = pickle.load(open('D:/VS Code/Health_Hub/DocBot/model3.pkl', 'rb'))  
-model4 = pickle.load(open('D:/VS Code/Health_Hub/DocBot/model4.pkl', 'rb'))  
 model2 = pickle.load(open('D:/VS Code/Health_Hub/DocBot/model2.pkl', 'rb'))  
 
 test=pd.read_csv("D:/VS Code/Health_Hub/DocBot/test_data.csv",error_bad_lines=False)
 x_test=test.drop('prognosis',axis=1)
-
 
 
 @app.route('/')
@@ -37,12 +34,8 @@ def predict():
 
         prediction1 = str(model1.predict(b)) 
         prediction2 = str(model2.predict(b))
-        prediction3 = str(model3.predict(b))
-        prediction4 = str(model4.predict(b))
-        # print(type(str(prediction1)))
 
-
-        listA = [prediction1, prediction2, prediction3, prediction4]   
+        listA = [prediction1, prediction2]   
         occurence_count = Counter(listA)
         res=occurence_count.most_common(1)[0][0] 
         
