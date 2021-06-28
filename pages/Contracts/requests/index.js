@@ -16,7 +16,7 @@ class RequestIndex extends Component {
 
     const requests = await Promise.all(
       Array(parseInt(requestCount)).fill().map((element, index) => {
-      return campaign.methods.requests(index).call();
+      return campaign.methods.requests(0, index).call();
       })
     );
 
@@ -27,7 +27,7 @@ class RequestIndex extends Component {
 
   renderRow() {
     return this.props.requests.map((request, index) => {
-      console.log(request);
+      // console.log(request);
 
       return (
         <RequestRow
