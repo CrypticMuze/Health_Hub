@@ -3,10 +3,31 @@ import { Card,Button,Menu,Table } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css'
 import web3 from '../ethereum/web3';
 import Campaign from '../ethereum/campaign';
+import {Router} from '../routes'
+
 
 
 class RequestRow extends Component {
 
+  state = {
+    loading: false
+  };
+
+  onApprove = async () => {
+    this.setState({loading: true});
+    
+    try{
+    const campaign = Campaign(this.props.address);
+    const accounts = await web3.eth.getAccounts();
+    await campaign.methods.finalizeRequest(0,this.props.request[1]).send({
+      from: accounts[0]
+    });
+    Router.pushRoute(`/Contracts/${this.props.address}/requests`);
+  } catch (err) {
+    this.setState({errorMsg: err.message});
+  }
+  this.setState({loading: false});
+}
 
   render() {
 
@@ -24,23 +45,15 @@ class RequestRow extends Component {
         <Cell>{ this.props.request[2]==true ? 'YES' : 'NO' }</Cell>
         <Cell>
           {request.complete ? null : (
-            <Button color="green" basic onClick={this.onApprove}>Approve</Button>
+            <Button color="green" basic loading={this.state.loading} onClick={this.onApprove}>Approve</Button>
           )}
           </Cell>
 
       </Row>
     );
   }
-
-  onApprove = async () => {
-    const campaign = Campaign(this.props.address);
-    const accounts = await web3.eth.getAccounts();
-    await campaign.methods.finalizeRequest(0,this.props.request[1]).send({
-      from: accounts[0]
-    });
-  };
-
 }
+
 
 export default RequestRow;
 

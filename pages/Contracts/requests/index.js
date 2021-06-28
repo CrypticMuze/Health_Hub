@@ -25,6 +25,7 @@ class RequestIndex extends Component {
     };
   }
 
+
   renderRow() {
     return this.props.requests.map((request, index) => {
       // console.log(request);
