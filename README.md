@@ -22,4 +22,4 @@ In order to access this project onto your local system, follow the steps mention
 6. Finally execute 'npm run dev'
 7. That was it. Your'e good to go. The website will start on your local server 
   
-LIVE Demonstration: https://www.youtube.com/watch?v=oFSygjehMwY&ab_channel=AmanAnand
+LIVE Demonstration: https://youtu.be/fShgkQZcTa0
