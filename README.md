@@ -4,7 +4,10 @@ HealthHub aims to revolutionize patient healthcare by bringing all the key stake
 HealthHub is designed with the idea of being a one-stop solution for all the integral components of the medical sector. Our final vision for this project is that we provide an umbrella framework for all parties of the healthcare ecosystem (e.g. Insurance Agencies, Doctors, Patients, Pharmaceuticals, Diagnostic Centers, etc.). By leveraging the underlying transparent, scalable and secure blockchain platform we are enabling the ease of communication between all the mentioned agencies and enhancing the efficiency of the medical sector.
 
 #Problem Tackled
-This system is intended to be built centric on three major features and attributes:
+This project is intended to be built centric on these major features and attributes:
+
+-Leveraging the patient healthcare data after their approval, to improve the quality of AI models for all parties of the healthcare ecosystem (e.g. Insurance Agencies, Doctors, Patients, Pharmaceuticals, Diagnostic Centers, etc.) This huge amount of actual patient data can improve the accuracy of AI/ML models to another level, hence increasing a boom in the automated field.
+
 -A trusted directory of patient data in Electronic Health Records (EHRs) which guarantees access as well as the integrity of the data itself
 
 -Strengthened security in dealing with patient data by utilizing a particular encryption scheme and providing a transparent and undeniable audit trail based on an immutable access log
