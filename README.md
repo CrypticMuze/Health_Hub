@@ -1,28 +1,83 @@
-# HackTheMountains
+<p align="center">
+  <img src="https://github.com/aman-anand1906/Health_Hub/blob/main/Frontend/images/HHL.png" alt="HealthHubLogo"/>
+</p>
 
-HealthHub aims to revolutionize patient healthcare by bringing all the key stakeholders of the medical sector under one umbrella making everything very convenient not only for the patient but also the whole environment as a whole.
-HealthHub is designed with the idea of being a one-stop solution for all the integral components of the medical sector. Our final vision for this project is that we provide an umbrella framework for all parties of the healthcare ecosystem (e.g. Insurance Agencies, Doctors, Patients, Pharmaceuticals, Diagnostic Centers, etc.). By leveraging the underlying transparent, scalable and secure blockchain platform we are enabling the ease of communication between all the mentioned agencies and enhancing the efficiency of the medical sector.
+# HealthHub
 
-#Problem Tackled
-This project is intended to be built centric on these major features and attributes:
+## About the Project
 
--Leveraging the patient healthcare data after their approval, to improve the quality of AI models for all parties of the healthcare ecosystem (e.g. Insurance Agencies, Doctors, Patients, Pharmaceuticals, Diagnostic Centers, etc.) This huge amount of actual patient data can improve the accuracy of AI/ML models to another level, hence increasing a boom in the automated field.
+  HealthHub is a project that aims to revolutionize patient healthcare by bringing all the key stakeholders of the medical sector under one umbrella. This makes the medicare process very convenient not only for the patient but also for the whole environment as a whole. It is designed to be a one-stop solution for all the integral components of the medical sector.
 
--A trusted directory of patient data in Electronic Health Records (EHRs) which guarantees access as well as the integrity of the data itself
+  Our team's final vision for this project is that we provide a framework for all parties of the healthcare ecosystem (e.g. Insurance Agencies, Doctors, Patients, Pharmaceuticals, Diagnostic Centers, etc.) to leverage. By leveraging the underlying transparent, scalable and secure blockchain platform we are enabling the ease of communication between all the mentioned agencies and enhancing the efficiency of the medical sector.
 
--Strengthened security in dealing with patient data by utilizing a particular encryption scheme and providing a transparent and undeniable audit trail based on an immutable access log
+## Live Demonstartion of the Project
 
--Providing scalability to cover multiple existing EHRs of regional or core hospitals with the least modification and availability of the system without relying on a centralized supervisory system.
+  LIVE Demonstration: https://youtu.be/fShgkQZcTa0
 
+## Installation
 
-In order to access this project onto your local system, follow the steps mentioned below:
+1. Clone repo on your local system
 
-1. Performe git clone <URL> 
-2. Open a terminal and execute 'npm install' 
-3. Create a metamask account (if you don't have one) with some amount of ETH in it
-4. Change the 12 word mnemonic and infura API with your personal one 
-5. Change the account address in factory.js with yours
-6. Finally execute 'npm run dev'
-7. That was it. Your'e good to go. The website will start on your local server 
-  
-LIVE Demonstration: https://youtu.be/fShgkQZcTa0
+```bash
+git clone https://github.com/MishraLokesh/Health_Hub.git
+```
+2. Open a terminal on your localhost and install the dependencies
+
+```bash
+npm install
+```
+3. Create a Metamask account (if you do not already possess one) and use the Rinkeby Faucet (Our project is deployed on the Rinkeby Test Network) to obtain some test ETH in your metamask wallet.
+
+```
+https://faucet.rinkeby.io/ 
+```
+4. Add your personal 12-word mnemonic and Infura API
+
+```
+Goto Health_Hub/ethereum/deploy.js
+```
+```bash
+#In the deploy.js file (lines 11-18) make the following changes to the file -->
+let provider = new HDWalletProvider({
+  mnemonic: {
+  phrase: '#Enter 12 Word mnemonic here',
+  },
+  #// providerOrUrl: `https://rinkeby.infura.io/v3/${process.env.infura_API}`,
+  providerOrUrl: '#Use the format of the Infura API token above and add your own',
+  chainId: '4'
+  });
+```
+5. Update your Metamask Wallet account address 
+
+```
+Goto Health_Hub/ethereum/factory.js
+```
+```bash
+#In the factory.js file (lines 5 -8) make the following changes to the file -->
+const instance = new web3.eth.Contract(
+  JSON.parse(JSON.stringify(Factory.abi)),
+  '#Enter your Metamask wallet account address here'
+);
+```
+6. Open a terminal on your localhost and deploy the development live server
+
+```bash
+npm run dev
+```
+You're good to go! HealthHub should open on the live server.
+
+## Want to Contribute?
+To contribute to this project:
+1. Fork this repo
+2. Make desired changes after cloning it on your local system.
+3. Generate a pull request.
+
+Note: Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Please make sure to update tests as appropriate.
+
+## Connect with the Collaborators
+1. Lokesh Mishra - [LinkedIN](https://www.linkedin.com/in/lokesh-mishra-0807/) || [GitHub](https://github.com/MishraLokesh) || [Instagram](https://www.instagram.com/lokesh.mishra__/)
+
+2. Aman Anand - [LinkedIN](https://www.linkedin.com/in/amanxanand/) || [GitHub](https://github.com/aman-anand1906) || [Instagram](https://www.instagram.com/aman_anand_619/")
+
+## License
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) license.
