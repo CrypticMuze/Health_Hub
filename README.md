@@ -1,4 +1,4 @@
-![HealthHubLogo](Frontend/images/HHL.png)
+  ![HealthHubLogo](Frontend/images/HHL.png)
 
 # HealthHub
 
