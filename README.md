@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/CrypticMuze/Health_Hub/tree/main/Frontend/images/HHL.png" alt="HealthHubLogo" height=250px width=250px/>
+<img src="https://github.com/MishraLokesh/Health_Hub/blob/main/Frontend/images/HHL.png" alt="HealthHubLogo" height=250px width=250px/>
 </p>
 
 # HealthHub
